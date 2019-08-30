@@ -1,6 +1,7 @@
 import express from 'express';
 import productController from './api/controllers/product.controller';
 import customerInfoController from './api/controllers/customerInfo.controller';
+import { userRouter } from './api/user';
 
 
 export const router = express.Router();
@@ -12,3 +13,7 @@ router.get('/customerinfo/:id',customerInfoController.findOneCustomerInfo);
 router.post('/customerinfo',customerInfoController.createCustomerInfo);
 router.put('/customerinfo/:id',customerInfoController.updateCustomerInfo);
 router.delete('/customerinfo/:id',customerInfoController.deleteCustomerInfo);
+
+
+/// user related routes
+router.use('/users',userRouter);
