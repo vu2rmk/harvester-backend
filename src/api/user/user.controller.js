@@ -76,8 +76,9 @@ export default {
     }
   },
 
-  test(req, res){
+  async test(req, res){
 
-    res.json({msg: 'Everything is fine here!'});
+    // console.log(req.user);
+    return res.json(req.user);
   }
 };

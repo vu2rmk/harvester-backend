@@ -1,8 +1,8 @@
 var User = function(user) {
-    this.id = id ? customerInfo.id : 0;
-    this.username = customerInfo.username;
-    this.email = custmomerInfo.email;
-    this.password = customerInfo.password;
+    this.id = user.id ? user.id : 0;
+    this.username = user.username;
+    this.email = user.email;
+    this.password = user.password;
   };
   
   export default User;

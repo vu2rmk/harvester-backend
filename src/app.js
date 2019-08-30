@@ -6,14 +6,12 @@ import mysql from 'mysql';
 
 import {router} from './router';
 import con from './api/config/dbconnection';
+import { setGlobalMiddleware } from './api/middlewares/global-middleware';
 
 
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(cors());
-app.use(logger('dev'));
+setGlobalMiddleware(app);
 
 app.use('/api',router);
 
