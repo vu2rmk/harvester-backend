@@ -10,6 +10,7 @@ import jwt from 'jsonwebtoken';
 import 'dotenv/config';
 
 export default {
+  
   async signup(req, res) {
     try {
       //validate the request

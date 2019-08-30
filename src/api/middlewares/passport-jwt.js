@@ -25,9 +25,6 @@ export const configureJWTStratergy = () => {
             //let user = User(result[0]);
             var parseUser = JSON.parse(JSON.stringify(result));
 
-            console.log(result[0]);
-            console.log(parseUser[0]);
-
             if(result){
                 return done(null, parseUser[0]);
             } else {
